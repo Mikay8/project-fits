@@ -1,0 +1,79 @@
+@font-face {
+  font-family: POPPINS;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+.view{
+  padding-top: 5vh;
+}
+body {
+  background-color: #272727;
+
+}
+
+h1{
+  color: #ffffff;
+  font-size: 40px;
+  
+
+}
+
+p{
+  color: #ffffff;
+  font-size: 40px;
+}
+.row{
+padding-top: 30px;
+
+}
+.col-xs-12{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input[type=text] {
+  border: transparent;
+  background-color: transparent;
+  font-family: POPPINS;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  width: 247px;
+  height: 39px;
+}
+.userForm[type=text] {
+  border: none;
+  border-bottom: 2px solid #AF7CB6;
+  color:#AF7CB6;
+}
+.passForm[type=text] {
+  border: none;
+  border-bottom: 2px solid #8773E7;
+  color :#8773E7;
+}
+
+.LogInBtn{
+  box-sizing: border-box;
+  width: 247px;
+  height: 39px;
+  font-family: POPPINS;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: -60px;
+  background-color:transparent;
+  border: 3px solid #699DF2;
+  color:#699DF2;
+}
+.SignUpBtn{
+  box-sizing: border-box;
+  width: 247px;
+  height: 39px;
+  font-family: POPPINS;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: -60px;
+  background-color:transparent;
+  border: 3px solid #46B6F1;
+  color:#46B6F1;
+}

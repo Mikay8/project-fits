@@ -1,0 +1,28 @@
+.today {
+    color:#699DF2;
+    padding-top: 30px;
+}
+.col-xs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cal-num{
+    padding-bottom: 60px;
+  }
+  .M{
+    color:#AF7CB6;
+  }
+  .T{
+    color:#8773E7;
+  }
+  .W{
+    color:#699DF2;
+  }
+  .Th{
+    color:#46B6F1;
+  }
+  .F{
+    color:#57BDF2;
+  }
+  

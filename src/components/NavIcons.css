@@ -1,0 +1,20 @@
+.icon-bar{
+    width: 7vw;
+    height: auto;
+   
+
+}
+.col-xs-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .grid {
+    overflow: hidden;
+    background-color: transparent;
+    padding-bottom: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }

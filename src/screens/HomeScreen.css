@@ -1,0 +1,16 @@
+@font-face {
+    font-family: POPPINS;
+    src: url(../fonts/Poppins-Regular.ttf);
+  }
+
+  p{
+    color: #ffffff;
+    font-size: 30px;
+    font-family: POPPINS;
+  }
+  .date{
+
+    color: #AF7CB6;
+    font-size: 30px;
+    font-family: POPPINS;    
+  }
