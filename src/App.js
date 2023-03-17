@@ -1,14 +1,17 @@
 import * as React from 'react';
-import LoginScreen from './screens/loginScreen';
-import Navi from './screens/Navi';
-import SignInScreen from './screens/SignInScreen';
+import Login from './screens/loginScreen';
+import AppRoutes from './screens/AppRoutes';
+import SignUp from './screens/SignUpScreen';
+import { BrowserRouter, Routes, Route, NavLink} from  'react-router-dom';
 
 const App = () => {
     const [isLogged, setLog] = React.useState(false);
     const [isSigned, setSign] = React.useState(false);
     const [token, setToken] = React.useState();
       if (!token){
-         return <LoginScreen setToken={setToken}/>
+         return <Login setToken={setToken}/>
+
+
       }
     //Defaults to showing the Log Screen isLogged False
     //Once Logged in returns true 
@@ -21,7 +24,7 @@ const App = () => {
     return <>
        
 
-       <Navi isLogged= {true}/>
+       <AppRoutes isLogged= {true}/>
        
     </>
      

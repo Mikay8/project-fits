@@ -14,17 +14,40 @@ const HomeScreen = () => {
        <div>
           
           <Grid>
-                <Row>
-                    <Col xs={12} >
-                        <a href="/"> <img src={imageLogo} /></a>
-                    </Col>
-                </Row>
+        
+                    <Row>
+
+                            <Col xs ={8}>
+                               
+                                <Row center="xs">
+                                    <Col xs={4} xsOffset={6}>
+                                         <a href="/"  class="logo"> <img src={imageLogo} /></a>
+                                    </Col>
+                                </Row>
+                            </Col>
+                       
+                            <Col xs ={4}>
+                               
+                                <Row end="xs">
+                                    <Col xs={4} >
+                                         <a href="/Settings" class="logo"> Settings</a>
+                                    </Col>
+                                </Row>
+                            </Col>
+                            
+
+                    </Row>
+               
+                
                 <Row>
                     <Col xs={8} >
                         <p class="date">Today is <br/> {month} {day}, {year} </p>
                     </Col>
                     <Col xs={4} >
-                        <p>weather</p>
+                 
+                           <p>weather</p> 
+                      
+                        
                     </Col>
                 </Row>
             </Grid>

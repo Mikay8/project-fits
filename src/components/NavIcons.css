@@ -4,15 +4,15 @@
    
 
 }
-.col-xs-3{
+.nav-icon-col{
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .grid {
+  .nav-grid {
     overflow: hidden;
-    background-color: transparent;
+    background-color: #272727;
     padding-bottom: 20px;
     position: fixed;
     bottom: 0;

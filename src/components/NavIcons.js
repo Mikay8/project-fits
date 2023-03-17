@@ -11,20 +11,21 @@ const NavIcons = () => {
     return <>
 
 
-       <div class="grid">
+       <div class="nav-grid">
                <Grid >     
                   <Row >
 
-                  <Col xs ={3} >
+                  <Col xs ={3} class="nav-icon-col">
                         <NavLink to="/AddClothes"><img src={addClosetImg} class='icon-bar' /></NavLink>
                   </Col>
-                  <Col xs ={3}  >
+                  <Col xs ={3} class="nav-icon-col" >
                         <NavLink to="/Calendar"><img src={calendarImg} class='icon-bar'/></NavLink>
+                        
                   </Col>
-                  <Col xs ={3}  >
+                  <Col xs ={3} class="nav-icon-col" >
                         <NavLink to="/Closet"><img src={closetImg} class='icon-bar'/></NavLink>
                   </Col>
-                  <Col xs  ={3} >
+                  <Col xs  ={3} class="nav-icon-col" >
                         <NavLink to="/Randomize"><img src={randImg} class='icon-bar'/></NavLink>
                   </Col>
                   </Row>

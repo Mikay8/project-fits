@@ -1,8 +1,9 @@
-import React from 'react';
+import * as React from 'react'
+
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import imageLogo from '../images/fits-logo.png';
  
-const AddClothes = () => {
+const Settings = () => {
     return (
       <Grid>
       <div class="image-logo">
@@ -11,14 +12,14 @@ const AddClothes = () => {
                             <a href="/"> <img src={imageLogo} /></a>
                         </Col>
                     </Row>
-                </div>
+       </div>
       <Row>
           <Col xs={12} >
-              <p>Add Clothes</p>
+              <p>Settings</p>
           </Col>
       </Row>
   </Grid>
     );
 }
  
-export default AddClothes;
+export default Settings;

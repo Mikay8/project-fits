@@ -5,7 +5,7 @@ const CalendarTitle = ({month, year}) => {
 
 
     return  <>
-            <p>{month} {year}</p>
+            <p class="month-title">{month} {year}</p>
             
 
     </>

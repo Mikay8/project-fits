@@ -1,0 +1,83 @@
+@font-face {
+    font-family: POPPINS;
+    src: url(../fonts/Poppins-Regular.ttf);
+  }
+.col-xs-4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.col-xs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.month-title{
+    font-size: 3.5vw;
+}
+
+
+ .nextBtn{
+    background-color: transparent;
+    font-size: 3vw;
+    font-family: POPPINS;
+    color: #ffffff;
+    border:none;
+ }
+  .M{
+    color:#AF7CB6;
+  }
+  .T{
+    color:#8773E7;
+  }
+  .W{
+    color:#699DF2;
+  }
+  .Th{
+    color:#46B6F1;
+  }
+  .F{
+    color:#57BDF2;
+
+  }
+ .Su, .M, .T, .W, .Th, .F, .Sa{
+  font-size: 3vw;
+ }
+  a{
+    text-decoration: none;
+    font-size: 3vw;
+    font-family: POPPINS;
+    color: #ffffff;
+    
+  }
+ 
+ 
+  .day-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    
+  }
+  .day{
+    font-size: 3vw;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #ffffff;
+  }
+  .day:hover{
+    color:#699DF2;
+  }
+  .today {
+    font-size: 3vw;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color:#699DF2;
+    
+}
+.day-all{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20%;
+}
