@@ -2,16 +2,48 @@ import * as React from 'react';
 import './loginScreen.css';
 import imageLogo from '../images/fits-logo.png';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import SignUp from './SignUpScreen';
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Login = ({setToken}) => {
     //const [isLogged, setLog] = React.useState(true);
     //const navigate = useNavigate();
+    const [username, setUsername] = React.useState('');
+    const [password, setPassword] = React.useState('');
+    const navigate = useNavigate();
+     const sendSignUp = () => navigate('/SignUp');
+    async function submit(e) {
+        e.preventDefault();
     
-     const printT = () => {
-        console.log("Test");
-     };
+        try {
+        await axios.post("http://localhost:3000/", {
+            username: username,
+            password: password,
+        })
+        .then(res => {
+            if(res.data === "exist"){
+                setToken("yes")
+            
+            }
+            else if(res.data === "not exist"){
+                alert("User not found")
+            }
+        })
+        .catch(e=> {
+            alert("wrong details")
+            console.log(e)
+        })
+    
+    
+        }
+    
+        catch (err) {
+            console.log(err);
+    
+        }
+    }
+    
+  
 
     return  <>
       
@@ -24,7 +56,7 @@ const Login = ({setToken}) => {
                         <Col xs={12} >
 
                             
-                            <a href="/" onClick={printT()}> <img src={imageLogo} /></a>
+                            <a > <img src={imageLogo} /></a>
 
                         </Col>
                 
@@ -39,7 +71,7 @@ const Login = ({setToken}) => {
                         <Row >
                             
                             <Col Col xs={12} >
-                                <input class="userForm" type="text" value="Username"></input>
+                                <input class="userForm" type="text" name="Email" onChange={(e) => {setUsername(e.target.value)}}  ></input>
                             </Col>
                             
                         </Row>
@@ -51,7 +83,7 @@ const Login = ({setToken}) => {
                         <Row >
                         
                             <Col Col xs={12} >
-                                <input class="passForm" type="text" value="Password"></input>
+                                <input class="passForm" type="text" name="Password"onChange={(e)=>{setPassword(e.target.value)}} ></input>
                             </Col>
                             
                         </Row>
@@ -62,7 +94,7 @@ const Login = ({setToken}) => {
                         <Row >
                         
                             <Col Col xs={12} >
-                                <input class="LogInBtn" type="submit" onClick={setToken()} value="Log In"></input>
+                                <input class="LogInBtn" type="submit" onClick={submit} ></input>
                                 
                             </Col>
                         
@@ -77,7 +109,7 @@ const Login = ({setToken}) => {
                 <div class="login-row">
                     <Row class="login-row">
                         
-                        <Col xs={12} ><a href="/SignUp" class="SignInBtn"> Sign Up</a>  </Col>
+                        <Col xs={12} ><a onClick={sendSignUp} > Sign Up</a> </Col>
                         
                     </Row>
                 </div>

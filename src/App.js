@@ -2,35 +2,39 @@ import * as React from 'react';
 import Login from './screens/loginScreen';
 import AppRoutes from './screens/AppRoutes';
 import SignUp from './screens/SignUpScreen';
-import { BrowserRouter, Routes, Route, NavLink} from  'react-router-dom';
+import Error from './screens/ErrorScreen';
+import { BrowserRouter, Routes, Route} from  'react-router-dom';
 
 const App = () => {
-    const [isLogged, setLog] = React.useState(false);
-    const [isSigned, setSign] = React.useState(false);
+    
     const [token, setToken] = React.useState();
-      if (!token){
-         return <Login setToken={setToken}/>
 
+    
+      if (!token){
+         
+         return <>
+           
+               <Routes>
+                  <Route path="/" index element={<Login setToken={setToken}/>}/>
+                  <Route path="/SignUp" element={<SignUp setToken={setToken}/>} />
+                  <Route path="*"  element={<Error/>}/>
+               
+               </Routes>
+          
+         </>
+         
 
       }
-    //Defaults to showing the Log Screen isLogged False
-    //Once Logged in returns true 
-    //
-    /*
-           <LoginScreen setLog={setLog} isLogged= {isLogged} setSign ={setSign} isSigned={isSigned}/>
-       <SignInScreen isSigned={isSigned} setLog={setLog} isLogged= {isLogged}/>
-    */
 
     return <>
        
 
-       <AppRoutes isLogged= {true}/>
+       <AppRoutes />
        
     </>
      
+
    
-      
-    
   }
   
   export default App;

@@ -1,9 +1,10 @@
-import React from 'react';
+import * as React from 'react'
+
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import imageLogo from '../images/fits-logo.png';
 import {useNavigate} from 'react-router-dom';
  
-const AddClothes = () => {
+const Error = () => {
     const navigate = useNavigate();
      const sendHome = () => navigate('/Home');
     return (
@@ -11,17 +12,17 @@ const AddClothes = () => {
       <div class="image-logo">
                     <Row>
                         <Col xs={12} >
-                            <a onClick={sendHome} > <img src={imageLogo} /></a>
+                        <a onClick={sendHome} > <img src={imageLogo} /></a>
                         </Col>
                     </Row>
-                </div>
+       </div>
       <Row>
           <Col xs={12} >
-              <p>Add Clothes</p>
+              <p>Error 404</p>
           </Col>
       </Row>
   </Grid>
     );
 }
  
-export default AddClothes;
+export default Error;

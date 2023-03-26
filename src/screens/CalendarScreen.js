@@ -4,6 +4,7 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 import './CalendarScreen.css';
 import CalendarTitle from '../components/CalendarTitle';
 import CalendarGrid from '../components/CalendarGrid';
+import {useNavigate} from 'react-router-dom';
 const Calendar = ({monthNum, setmonthNum,year, setYear, daysInMonth, setdaysInMonth}) => {
     
     const months = ["January", "February", "March", "April", "May", "June",
@@ -40,13 +41,15 @@ const Calendar = ({monthNum, setmonthNum,year, setYear, daysInMonth, setdaysInMo
       
      };
 
+     const navigate = useNavigate();
+     const sendHome = () => navigate('/Home');
     return (
       <Grid>
         <div class="image-logo">
             <Row>
         
                 <Col xs={12} >
-                    <a href="/"> <img src={imageLogo} /></a>
+                        <a onClick={sendHome} > <img src={imageLogo} /></a>
                 </Col>
             </Row>
         </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import './HomeScreen.css';
 import imageLogo from '../images/fits-logo.png';
 import { Grid, Row, Col } from 'react-flexbox-grid';
+import {useNavigate} from 'react-router-dom';
 const HomeScreen = () => {
     const date = new Date();
     const months = ["January", "February", "March", "April", "May", "June",
@@ -10,6 +11,9 @@ const HomeScreen = () => {
     let day = date.getDate();
     let month = months[date.getMonth()];
     let year = date.getFullYear();
+    const navigate = useNavigate();
+     const sendHome = () => navigate('/Home');
+     const sendSettings = () => navigate('/Settings');
     return (
        <div>
           
@@ -21,7 +25,7 @@ const HomeScreen = () => {
                                
                                 <Row center="xs">
                                     <Col xs={4} xsOffset={6}>
-                                         <a href="/"  class="logo"> <img src={imageLogo} /></a>
+                                        <a onClick={sendHome} > <img src={imageLogo} /></a>
                                     </Col>
                                 </Row>
                             </Col>
@@ -30,7 +34,7 @@ const HomeScreen = () => {
                                
                                 <Row end="xs">
                                     <Col xs={4} >
-                                         <a href="/Settings" class="logo"> Settings</a>
+                                         <a onClick={sendSettings} class="logo"> Settings</a>
                                     </Col>
                                 </Row>
                             </Col>
